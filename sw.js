@@ -1,6 +1,6 @@
 // Guarda la página en el teléfono para que abra aunque no haya señal.
-const V = 'camiones-05d249f7';
-const SHELL = ['./', 'index.html', 'fb.js?v=05d249f7', 'firebase-config.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
+const V = 'camiones-04c615e9';
+const SHELL = ['./', 'index.html', 'fb.js?v=04c615e9', 'firebase-config.js', 'manifest.webmanifest', 'icon-192.png', 'icon-512.png'];
 self.addEventListener('install', e => { e.waitUntil(caches.open(V).then(c => c.addAll(SHELL)).then(() => self.skipWaiting())); });
 self.addEventListener('activate', e => { e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.startsWith('camiones-') && k !== V).map(k => caches.delete(k)))).then(() => self.clients.claim())); });
 self.addEventListener('fetch', e => {

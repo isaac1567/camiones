@@ -551,6 +551,29 @@ body.sin-sesion main{padding-bottom:40px}
 .inicio .check{align-items:flex-start;font-weight:400}
 .inicio .check input{margin-top:2px;flex:none}
 .alt-inicio{margin-top:8px}
+/* Instalar en el teléfono */
+.instalar{display:flex;align-items:center;flex-wrap:wrap;gap:10px 12px;background:var(--paper);border-radius:12px;box-shadow:var(--shadow);border-left:4px solid var(--maize);padding:12px 12px 12px 14px;position:relative}
+[data-inst="banner"] .instalar{margin-bottom:14px}
+[data-inst="inicio"] .instalar{margin-top:14px}
+.cuenta [data-inst] .instalar{box-shadow:none;background:var(--paper-2)}
+.inst-ico{display:inline-flex;flex:none;color:var(--ink)}
+.inst-ico svg{width:28px;height:28px}
+.inst-t{flex:1 1 180px;min-width:0;display:grid;gap:2px;margin:0}
+.inst-t b{font-size:16px}
+.inst-t small{color:var(--muted);font-size:13.5px;line-height:1.35}
+.instalar .btn.primary{flex:none}
+.instalar.pasos .btn{flex:none}
+.inst-x{position:absolute;top:2px;right:4px;border:0;background:none;color:var(--muted);font-size:22px;line-height:1;width:32px;height:32px;cursor:pointer}
+[data-inst="banner"] .instalar{padding-right:36px}
+details.instalar{display:block}
+details.instalar summary{display:flex;align-items:center;gap:10px;cursor:pointer;list-style:none;min-height:32px}
+details.instalar summary::-webkit-details-marker{display:none}
+details.instalar summary::after{content:"▾";margin-left:auto;color:var(--muted);font-size:18px;line-height:1;transition:transform .15s}
+details.instalar[open] summary::after{transform:rotate(180deg)}
+a.btn{text-decoration:none}
+details.instalar ol{margin:12px 0 8px;padding-left:22px;display:grid;gap:6px;font-size:15px}
+details.instalar .hint{margin:4px 0 10px}
+.instalar.ok{border-left-color:var(--ok)}
 .cuenta{display:grid;gap:8px;padding-bottom:16px;border-bottom:1px solid var(--line)}
 .cuenta h3,.settings-sec h3{font-family:var(--sans);font-size:15px;font-weight:700}
 .cuenta-btns{display:flex;flex-wrap:wrap;gap:8px}
@@ -604,8 +627,8 @@ img.sin-foto{opacity:.4}
 <dialog id="dlg"></dialog>
 <div id="toast" role="status" aria-live="polite"></div>
 <script src="firebase-config.js"></script>
-<script src="fb.js?v=05d249f7"></script>
-<script>const APP_VER = '05d249f7'; const TARIFAS_BASE = {"productos": ["HRW", "DNS", "SRW", "CWRS", "TRIGO", "SOYA", "MAÍZ", "AFRECHO"], "lugares": [{"nombre": "Avitecnica", "precios": {"MAÍZ": 21.04}}, {"nombre": "Albaca", "precios": {"SOYA": 21.41, "MAÍZ": 21.41}}, {"nombre": "Agrifeed", "precios": {"MAÍZ": 21.98}}, {"nombre": "Barahona", "precios": {"AFRECHO": 68.44}}, {"nombre": "Baní", "precios": {"MAÍZ": 37.63}}, {"nombre": "Cotuí", "precios": {"SRW": 41.42, "CWRS": 41.42}}, {"nombre": "Constanza", "precios": {"SOYA": 75.08, "MAÍZ": 75.08}}, {"nombre": "C.Germenson", "precios": {"SOYA": 54.76, "MAÍZ": 54.76}}, {"nombre": "Dajabon", "precios": {"SOYA": 104.16, "MAÍZ": 104.16}}, {"nombre": "Tamboril", "precios": {"SOYA": 42.11, "MAÍZ": 42.11}}, {"nombre": "Hato Mayor", "precios": {"MAÍZ": 47.31}}, {"nombre": "Km22", "precios": {"SOYA": 27.29}}, {"nombre": "Licey", "precios": {"HRW": 41.36, "SRW": 41.36, "CWRS": 41.36}}, {"nombre": "Los quemaos", "precios": {"SOYA": 69.8, "MAÍZ": 69.8}}, {"nombre": "La Vega", "precios": {"SOYA": 39.32, "MAÍZ": 39.32}}, {"nombre": "Manoguayabo", "precios": {"DNS": 21.04, "CWRS": 21.04}}, {"nombre": "Moncion", "precios": {"SOYA": 73.6, "MAÍZ": 73.6}}, {"nombre": "Moca", "precios": {"SOYA": 42.11, "MAÍZ": 42.11}}, {"nombre": "Mercasid", "precios": {"MAÍZ": 22.0}}, {"nombre": "Maimon", "precios": {"SOYA": 34.59, "MAÍZ": 34.59}}, {"nombre": "Monte Ctistí", "precios": {"SOYA": 114.56, "MAÍZ": 114.56}}, {"nombre": "Navarrete", "precios": {"MAÍZ": 50.96}}, {"nombre": "San Pedro", "precios": {"DNS": 38.76, "TRIGO": 38.76}}, {"nombre": "San Cristobal", "precios": {"MAÍZ": 30.35}}, {"nombre": "San Francisco", "precios": {"HRW": 41.42}}, {"nombre": "Sierra Prieta", "precios": {"MAÍZ": 31.42}}, {"nombre": "Santiago", "precios": {"SOYA": 42.11, "MAÍZ": 42.11}}, {"nombre": "Santiago Rodriguez", "precios": {"SOYA": 78.67, "MAÍZ": 78.67}}, {"nombre": "Salcedo", "precios": {"SOYA": 43.14, "MAÍZ": 43.14}}, {"nombre": "Fantino", "precios": {"SOYA": 40.24, "MAÍZ": 40.24}}, {"nombre": "Valverde Mao", "precios": {"SOYA": 65.98, "MAÍZ": 65.98}}, {"nombre": "Villa Tapia", "precios": {"MAÍZ": 42.11}}, {"nombre": "Villa Gonzalez", "precios": {"MAÍZ": 45.71}}, {"nombre": "Pimentel", "precios": {"SOYA": 50.55, "MAÍZ": 50.55}}, {"nombre": "Puerto Plata", "precios": {"SOYA": 91.4, "MAÍZ": 91.4}}, {"nombre": "P.Salcedo", "precios": {"MAÍZ": 87.72}}, {"nombre": "PLTA nueva", "precios": {"MAÍZ": 10.06}}], "origenBase": "Sindicato"};</script>
+<script src="fb.js?v=04c615e9"></script>
+<script>const APP_VER = '04c615e9'; const TARIFAS_BASE = {"productos": ["HRW", "DNS", "SRW", "CWRS", "TRIGO", "SOYA", "MAÍZ", "AFRECHO"], "lugares": [{"nombre": "Avitecnica", "precios": {"MAÍZ": 21.04}}, {"nombre": "Albaca", "precios": {"SOYA": 21.41, "MAÍZ": 21.41}}, {"nombre": "Agrifeed", "precios": {"MAÍZ": 21.98}}, {"nombre": "Barahona", "precios": {"AFRECHO": 68.44}}, {"nombre": "Baní", "precios": {"MAÍZ": 37.63}}, {"nombre": "Cotuí", "precios": {"SRW": 41.42, "CWRS": 41.42}}, {"nombre": "Constanza", "precios": {"SOYA": 75.08, "MAÍZ": 75.08}}, {"nombre": "C.Germenson", "precios": {"SOYA": 54.76, "MAÍZ": 54.76}}, {"nombre": "Dajabon", "precios": {"SOYA": 104.16, "MAÍZ": 104.16}}, {"nombre": "Tamboril", "precios": {"SOYA": 42.11, "MAÍZ": 42.11}}, {"nombre": "Hato Mayor", "precios": {"MAÍZ": 47.31}}, {"nombre": "Km22", "precios": {"SOYA": 27.29}}, {"nombre": "Licey", "precios": {"HRW": 41.36, "SRW": 41.36, "CWRS": 41.36}}, {"nombre": "Los quemaos", "precios": {"SOYA": 69.8, "MAÍZ": 69.8}}, {"nombre": "La Vega", "precios": {"SOYA": 39.32, "MAÍZ": 39.32}}, {"nombre": "Manoguayabo", "precios": {"DNS": 21.04, "CWRS": 21.04}}, {"nombre": "Moncion", "precios": {"SOYA": 73.6, "MAÍZ": 73.6}}, {"nombre": "Moca", "precios": {"SOYA": 42.11, "MAÍZ": 42.11}}, {"nombre": "Mercasid", "precios": {"MAÍZ": 22.0}}, {"nombre": "Maimon", "precios": {"SOYA": 34.59, "MAÍZ": 34.59}}, {"nombre": "Monte Ctistí", "precios": {"SOYA": 114.56, "MAÍZ": 114.56}}, {"nombre": "Navarrete", "precios": {"MAÍZ": 50.96}}, {"nombre": "San Pedro", "precios": {"DNS": 38.76, "TRIGO": 38.76}}, {"nombre": "San Cristobal", "precios": {"MAÍZ": 30.35}}, {"nombre": "San Francisco", "precios": {"HRW": 41.42}}, {"nombre": "Sierra Prieta", "precios": {"MAÍZ": 31.42}}, {"nombre": "Santiago", "precios": {"SOYA": 42.11, "MAÍZ": 42.11}}, {"nombre": "Santiago Rodriguez", "precios": {"SOYA": 78.67, "MAÍZ": 78.67}}, {"nombre": "Salcedo", "precios": {"SOYA": 43.14, "MAÍZ": 43.14}}, {"nombre": "Fantino", "precios": {"SOYA": 40.24, "MAÍZ": 40.24}}, {"nombre": "Valverde Mao", "precios": {"SOYA": 65.98, "MAÍZ": 65.98}}, {"nombre": "Villa Tapia", "precios": {"MAÍZ": 42.11}}, {"nombre": "Villa Gonzalez", "precios": {"MAÍZ": 45.71}}, {"nombre": "Pimentel", "precios": {"SOYA": 50.55, "MAÍZ": 50.55}}, {"nombre": "Puerto Plata", "precios": {"SOYA": 91.4, "MAÍZ": 91.4}}, {"nombre": "P.Salcedo", "precios": {"MAÍZ": 87.72}}, {"nombre": "PLTA nueva", "precios": {"MAÍZ": 10.06}}], "origenBase": "Sindicato"};</script>
 <script>
 
 'use strict';
@@ -616,7 +639,7 @@ const PRODS = ['HRW','DNS','SRW','CWRS','TRIGO','SOYA','MAÍZ','AFRECHO'];
 const CATS = ['Gomas','Aceite y filtros','Frenos','Motor','Transmisión','Suspensión','Eléctrico','Carrocería','Papeles y seguro','Otro'];
 const SUGERIDAS = [['Aceite de motor','Aceite y filtros'],['Filtro de aceite','Aceite y filtros'],['Filtro de aire','Aceite y filtros'],['Filtro de gasoil','Aceite y filtros'],['Engrase','Aceite y filtros'],['Gomas delanteras','Gomas'],['Gomas traseras','Gomas'],['Bandas de freno','Frenos'],['Batería','Eléctrico'],['Seguro','Papeles y seguro'],['Marbete','Papeles y seguro']];
 const PARAM_KEYS = ['Marca','Modelo','Año','Placa','Chofer','Sindicato','Tipo de carga','Nº de chasis'];
-const F250_VALS = {'Marca':'Mack','Modelo':'Media cara','Año':'1985','Sindicato':'Sindicato de Camioneros y Furgoneros de Santo Domingo','Tipo de carga':'Granos: maíz, trigo, afrecho y soya'};
+const F250_VALS = {};
 const DEF_CFG = {pctVentaComprobante:5.2, pctVentaEfectivo:3, pctChofer:20, pctDos:2, prestamoActivo:false, prestamo:0, prestamoMes:{}, mantEnResumen:true, cantidadViaje:837, calc7:true, pctSiete:7, alcabala:100, calcOtro:35};
 
 const $ = (s, r = document) => r.querySelector(s);
@@ -662,7 +685,7 @@ const stripDoc = o => { const {id, virtual, ...d} = o; return d; };
 function virtualF250(base) {
   const m = base || S.cfgMain || {};
   return {id: 'f250', virtual: true, nombre: 'F250', parametros: PARAM_KEYS.map(k => ({k, v: F250_VALS[k] || ''})), tarifasDoc: 'tabla', km: null, kmFecha: null, orden: 0, creado: '',
-    cfg: {...DEF_CFG, prestamoActivo: true, prestamo: m.prestamo ?? 60000, prestamoMes: {...(m.prestamoMes || {})},
+    cfg: {...DEF_CFG, prestamoActivo: true, prestamo: m.prestamo ?? 0, prestamoMes: {...(m.prestamoMes || {})},
       pctVentaComprobante: m.pctVentaComprobante ?? 5.2, pctVentaEfectivo: m.pctVentaEfectivo ?? 3, pctChofer: m.pctChofer ?? 20, pctDos: m.pctDos ?? 2, cantidadViaje: m.cantidadViaje ?? 837}};
 }
 function isEmptyStore() { return !S.cfgMainExists && !S.camionesDocs.length && !S.liqsAll.length && !S.turnosAll.length && !Object.keys(S.tarifasDocs).length && !S.piezasAll.length && !S.mantAll.length && !S.deudaAll.length; }
@@ -883,11 +906,59 @@ function render() {
   if (S.truckId !== t.id) S.truckId = t.id;
   if (!S.mes || !meses(t).includes(S.mes) || (S.mesAuto && S.mes !== defaultMes(t))) { S.mes = defaultMes(t); S.mesAuto = true; }
   const banner = S.mode === 'mem' ? '<p class="banner">Esta vista no está conectada al guardado: puedes usarla, pero los cambios se pierden al cerrar.</p>' : '';
-  main.innerHTML = banner + ({resumen: vResumen, viajes: vViajes, turnos: vTurnos, tarifas: vTarifas, perfil: vPerfil}[S.tab])(t);
+  main.innerHTML = banner + instBox('banner') + ({resumen: vResumen, viajes: vViajes, turnos: vTurnos, tarifas: vTarifas, perfil: vPerfil}[S.tab])(t);
   if (S.tab === 'tarifas') setupCalc();
   const ch = $('.chips.months'), on = ch && ch.querySelector('[aria-pressed="true"]');
   if (on) ch.scrollLeft = on.offsetLeft - (ch.clientWidth - on.offsetWidth) / 2;
 }
+
+/* ================= Instalar como app en el teléfono ================= */
+const INST = {evt: null, done: false, waited: false};
+const UA = navigator.userAgent || '';
+const esIOS = /iPhone|iPad|iPod/.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+const esAndroid = /Android/i.test(UA);
+// Navegadores metidos dentro de otra app (WhatsApp, Facebook, Instagram, la app de Google…): desde ahí no se instala.
+const enOtraApp = /; wv\)|FBAN|FBAV|FB_IAB|Instagram|WhatsApp|Line\/|TikTok|Snapchat|GSA\//.test(UA) || (esIOS && /CriOS|FxiOS|EdgiOS|OPiOS/.test(UA));
+const yaInstalada = () => (window.matchMedia && (matchMedia('(display-mode: standalone)').matches || matchMedia('(display-mode: fullscreen)').matches)) || navigator.standalone === true;
+const enlaceChrome = () => `intent://${location.host}${location.pathname}#Intent;scheme=https;package=com.android.chrome;S.browser_fallback_url=${encodeURIComponent(location.href)};end`;
+const ICON_PHONE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M12 7v7"/><path d="M9 11l3 3 3-3"/><path d="M10.5 18.5h3"/></svg>';
+function installHTML(where) {
+  if (yaInstalada()) return '';
+  if (INST.done) return '<div class="instalar ok"><span class="inst-ico">' + ICON_PHONE + '</span><p class="inst-t"><b>Ya quedó instalada.</b><small>Búscala en tu pantalla como “Camiones”.</small></p></div>';
+  if (INST.evt) {
+    if (where === 'banner' && LS.get('inst-cerrado')) return '';
+    return `<div class="instalar"><span class="inst-ico">${ICON_PHONE}</span><p class="inst-t"><b>Instálala en tu teléfono</b><small>Queda con su ícono como las demás apps y abre aunque no haya señal.</small></p>
+      <button type="button" class="btn primary" data-act="instalar">Instalar</button>${where === 'banner' ? '<button type="button" class="inst-x" data-act="inst-cerrar" aria-label="No mostrar">×</button>' : ''}</div>`;
+  }
+  if (where === 'banner') return '';
+  if (enOtraApp && esAndroid) return `<div class="instalar pasos"><p class="inst-t"><b>Para instalarla, ábrela en Chrome</b><small>Estás viendo la página dentro de otra app (WhatsApp, Facebook…), y desde ahí no se puede instalar.</small></p>
+    <a class="btn primary" href="${esc(enlaceChrome())}">Abrir en Chrome</a></div>`;
+  if (enOtraApp && esIOS) return `<div class="instalar pasos"><p class="inst-t"><b>Para instalarla, ábrela en Safari</b><small>En iPhone solo se instala desde Safari. Copia el enlace y pégalo en Safari.</small></p>
+    <button type="button" class="btn primary" data-act="copiar-enlace">Copiar enlace</button></div>`;
+  if (esIOS) return `<details class="instalar pasos"><summary><span class="inst-ico">${ICON_PHONE}</span><b>Cómo instalarla en tu iPhone</b></summary>
+    <ol><li>Toca el botón <b>Compartir</b> (el cuadrito con la flecha hacia arriba).</li><li>Baja y toca <b>Agregar a pantalla de inicio</b>. Si no sale, toca “Ver más”.</li><li>Toca <b>Agregar</b>.</li></ol></details>`;
+  if (esAndroid && INST.waited) return `<details class="instalar pasos"><summary><span class="inst-ico">${ICON_PHONE}</span><b>Cómo instalarla en tu teléfono</b></summary>
+    <ol><li>Toca los <b>tres puntitos ⋮</b> arriba a la derecha de Chrome.</li><li>Toca <b>Instalar app</b> o <b>Agregar a pantalla principal</b>.</li><li>Si te pregunta, elige <b>Instalar</b>.</li></ol>
+    <p class="hint">¿No te sale esa opción? Ábrela en Chrome y vuelve a intentar. Si ya la instalaste, búscala en tu pantalla como “Camiones”.</p>
+    <a class="btn" href="${esc(enlaceChrome())}">Abrir en Chrome</a></details>`;
+  return '';
+}
+const instBox = where => `<div data-inst="${where}">${installHTML(where)}</div>`;
+function updInstall() { document.querySelectorAll('[data-inst]').forEach(el => { const open = el.querySelector('details[open]'); el.innerHTML = installHTML(el.dataset.inst); if (open) { const d = el.querySelector('details'); if (d) d.open = true; } }); }
+async function instalarApp() {
+  const e = INST.evt; if (!e) return;
+  INST.evt = null;
+  try { await e.prompt(); const r = await e.userChoice; if (r && r.outcome === 'accepted') INST.done = true; } catch {}
+  updInstall();
+}
+async function copiarEnlace() {
+  const url = location.origin + location.pathname;
+  try { await navigator.clipboard.writeText(url); toast('Enlace copiado. Ábrelo en Safari.'); }
+  catch { prompt('Copia este enlace y ábrelo en Safari:', url); }
+}
+window.addEventListener('beforeinstallprompt', e => { e.preventDefault(); INST.evt = e; updInstall(); });
+window.addEventListener('appinstalled', () => { INST.evt = null; INST.done = true; updInstall(); toast('Listo. Búscala en tu pantalla como “Camiones”.'); });
+setTimeout(() => { INST.waited = true; updInstall(); }, 3500);
 
 /* ================= Entrada, primer camión y respaldo ================= */
 const ICON_TRUCK_BIG = '<svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M2 8h15v14H2z"/><path d="M17 12h6l5 5v5H17z"/><path d="M20 12v5h8"/><circle cx="7.5" cy="23.5" r="2.6"/><circle cx="22.5" cy="23.5" r="2.6"/></svg>';
@@ -903,6 +974,7 @@ function vAuth() {
   const titulo = m === 'crear' ? 'Crear tu cuenta' : m === 'olvido' ? 'Cambiar la contraseña' : 'Entrar';
   return `<section class="auth">
     <div class="auth-brand">${ICON_TRUCK_BIG}<h1>Control de camiones</h1><p>Viajes, comprobantes, turnos, tarifas y mantenimiento de tus camiones, en el celular.</p></div>
+    ${instBox('auth')}
     <div class="auth-card">
       <h2>${titulo}</h2>
       ${m !== 'olvido' ? `<button type="button" class="btn google" data-act="au-google">${ICON_GOOGLE}<span>${m === 'crear' ? 'Crear cuenta con Google' : 'Entrar con Google'}</span></button>
@@ -973,7 +1045,7 @@ function vInicio() {
     </form>
     <p class="hint alt-inicio">¿Ya usabas este sistema? <button type="button" class="linkish" data-act="resp-importar">Cargar un respaldo</button></p>
     <p class="hint alt-inicio">Entraste como ${esc(S.userEmail || S.userName)}. <button type="button" class="linkish" data-act="salir">Cerrar sesión</button></p>
-  </section>`;
+  </section>${instBox('inicio')}`;
 }
 function saveInicio(f, btn) {
   setErr(f, '');
@@ -2526,7 +2598,7 @@ function cuentaHTML() {
   return `<section class="cuenta"><h3>Tu cuenta</h3>
     <p>${S.userName ? esc(S.userName) + '<br>' : ''}<span class="mut">${esc(S.userEmail)}</span></p>
     <div class="cuenta-btns"><button type="button" class="btn sm" data-act="resp-exportar">Descargar respaldo</button><button type="button" class="btn sm" data-act="resp-importar">Cargar respaldo</button><button type="button" class="btn sm danger" data-act="salir">Cerrar sesión</button></div>
-    <p class="hint">El respaldo es un archivo con todos tus camiones, pagos y fotos. Guárdalo en un lugar seguro, por si cambias de teléfono.</p></section>`;
+    <p class="hint">El respaldo es un archivo con todos tus camiones, pagos y fotos. Guárdalo en un lugar seguro, por si cambias de teléfono.</p>${instBox('cuenta')}</section>`;
 }
 function openAjustes() {
   if (!S.uid) return;
@@ -2740,6 +2812,9 @@ document.addEventListener('click', e => {
     case 'usar-tarifa': { const row = T().lugares[+el.dataset.i]; if (row) S.calc.origen = origenDe(row); } S.calc.lugar = +el.dataset.i; S.calc.producto = el.dataset.p; render(); if (matchMedia('(max-width:979px)').matches) $('#calc')?.scrollIntoView({behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth', block: 'start'}); break;
     case 'ajustes': openAjustes(); break;
     case 'au-google': authGoogle(el); break;
+    case 'instalar': instalarApp(); break;
+    case 'inst-cerrar': LS.set('inst-cerrado', '1'); updInstall(); break;
+    case 'copiar-enlace': copiarEnlace(); break;
     case 'au-mode': AU.mode = el.dataset.m; AU.err = ''; if (el.dataset.m !== 'entrar') AU.msg = ''; render(); break;
     case 'salir': cerrarSesion(); break;
     case 'resp-exportar': exportarRespaldo(el); break;
