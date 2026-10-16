@@ -1,0 +1,17 @@
+{
+  "name": "Control de camiones",
+  "short_name": "Camiones",
+  "description": "Viajes, comprobantes, turnos, tarifas y mantenimiento de tus camiones.",
+  "lang": "es-DO",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#E3E7EB",
+  "theme_color": "#15233B",
+  "icons": [
+    {"src": "icon-192.png", "sizes": "192x192", "type": "image/png"},
+    {"src": "icon-512.png", "sizes": "512x512", "type": "image/png"},
+    {"src": "icon-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable"}
+  ]
+}
